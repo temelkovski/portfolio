@@ -6,6 +6,34 @@ body {
     font-size: 1.5em;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #66BFBF;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Rest of your existing styles */
 h1 {
     font-size: 5.625rem;
     margin: 50px auto 0;
@@ -86,9 +114,17 @@ hr {
 }
 
 .skill-row {
-    width: 50%;
-    margin: 100px auto;
-    text-align: left;
+    width: 30%;
+    margin: 50px auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skill-row.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .coding-img {
@@ -108,13 +144,20 @@ hr {
     margin: 40px auto 60px;
 }
 
-.copyright {
-    color: #EAF6F6;
-    font-size: 0.75rem;
-    padding: 20px 0;
+.contact-me form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.btn {
+.contact-me form input,
+.contact-me form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.contact-me form button {
     background: #11cdd4;
     background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
     background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
@@ -122,16 +165,16 @@ hr {
     background-image: -o-linear-gradient(top, #11cdd4, #11999e);
     background-image: linear-gradient(to bottom, #11cdd4, #11999e);
     -webkit-border-radius: 8;
-    -moz-border-radius: 8;
+    -moz-border-radius: 8px;
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-  }
-  
-  .btn:hover {
+}
+
+.contact-me form button:hover {
     background: #30e3cb;
     background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
     background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
@@ -139,4 +182,25 @@ hr {
     background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
     background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
     text-decoration: none;
-  }
+}
+
+.contact-me form input,
+.contact-me form textarea,
+.contact-me form button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-link {
+    margin: 0 15px;
+    color: #EAF6F6;
+}
+
+.footer-link:hover {
+    color: #11999E;
+}
+
+.copyright {
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0;
+}

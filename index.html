@@ -15,6 +15,14 @@
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="top-container">
         <img class="top-cloud" src="images/cloud.png" alt="cloud image">
         <h1>I'm Dimitar,</h1>
@@ -24,49 +32,47 @@
     </div>
 
     <div class="middle-container">
-        <div class="profile">
+        <div id="about" class="profile">
             <img src="images/panda.png" alt="panda image">
             <h2>Hello.</h2>
-            <p class="intro">My name is Dimitar. I am a Full Stack Developer focused on Front End, currently working as a freelancer.</p>
+            <p class="intro">My name is Dimitar. I am a Full Stack Developer specializing in React and React Native. I offer professional development services to create high-quality, responsive web and mobile applications tailored to your needs.</p>
         </div>
         <hr>
-        <div class="skills">
+        <div id="skills" class="skills">
             <h2>My Skills.</h2>
             <div class="skill-row">
-                <img class="coding-img"
-                    src="https://media3.giphy.com/media/QssGEmpkyEOhBCb7e1/200w.webp?cid=ecf05e47wuam85zrpdxeo9q2403ej7l6l7t0iivfm306t3d6&rid=200w.webp&ct=s"
-                    alt="coding gif">
-                <h3>Technologies:</h3>
-                <p>
-                    HTML5, CSS3, JavaScript, Node.js, React.js, Java, MongoDB, MySQL.
-                </p>
+                <h3>Front-End Technologies:</h3>
+                <p>HTML5, CSS3, JavaScript, React.js</p>
             </div>
             <div class="skill-row">
-                <img class="project-img"
-                    src="https://media3.giphy.com/media/fn3oLkVgONyam5tkCa/200w.webp?cid=ecf05e47yuqk410d66rjq8ohd4vg3yb17i5j3vtve8ouvaoa&rid=200w.webp&ct=s"
-                    alt="project gif">
-                <h3>Personal Projects:</h3>
-                <ul>
-                    <li><a href="https://gentle-gorge-65983.herokuapp.com">React Weather App</a></li>
-                    <li><a href="https://hidden-lake-78165.herokuapp.com">React Keeper App</a></li>
-                    <li><a href="https://github.com/temelkovski/node-ejs-bookatab">Bookatab App</a></li>
-                </ul>
+                <h3>Back-End Technologies:</h3>
+                <p>Node.js, MongoDB, MySQL</p>
+            </div>
+            <div class="skill-row">
+                <h3>Mobile Development:</h3>
+                <p>React Native</p>
             </div>
         </div>
         <hr>
-        <div class="contact-me">
+        <div id="contact" class="contact-me">
             <h2>Get In Touch</h2>
-            <a class="btn" href="mailto:temelkovski.dimitar@gmail.com">CONTACT ME</a>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </div>
-
 
     <div class="bottom-container">
         <a class="footer-link" href="https://www.linkedin.com/in/temelkovski">LinkedIn</a>
         <a class="footer-link" href="https://facebook.com/dimitar.temelkovski">Facebook</a>
         <a class="footer-link" href="https://www.github.com/temelkovski">GitHub</a>
-        <p class="copyright">© 2022 Dimitar Temelkovski.</p>
+        <p class="copyright">© 2024 Dimitar Temelkovski.</p>
     </div>
+
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
